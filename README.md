@@ -17,7 +17,7 @@ trackpad o la funzione touchscreen del nostro dispositivo. Xrandr, in questa cir
 Il problema è che il comando "xrandr" non tiene conto della visuale dell'utente, e dunque cambia l'orinetamento solo dell'input, e non
 "ruota" tutto il trackpad o il touchscreen. Esiste una soluzione. Con il comando "xinput -set-prop " si possono modificare le proprietà
 dei dispositivi di input del nostro sistema, tra i quali c'è una funzione interessante, che si chiama "Coordinate Transformation Matrix".
-Questa ci permette sostanzialemente di ricalibrare i nostri dispositivi di input senza incappare in ulteriori problemi.
+Questa ci permette sostanzialmente di ricalibrare i nostri dispositivi di input senza incappare in ulteriori problemi.
 
 Per esempio:
 dato che:
@@ -27,7 +27,7 @@ dato che:
 
 con i comandi:
 
-		xinput set-prop "$TOUCHPAD" "$TRANSFORM" 0 -1 1 1 0 0 0 0 1
+		xinput set-prop "$TOUCHPAD"    "$TRANSFORM" 0 -1 1 1 0 0 0 0 1
 		
 		e
 		
@@ -40,7 +40,7 @@ sistemi GNU/Linux.
 
 
 Per modificare in modo efficace queste variabili, l'utente GitHub "mildmojo", ha creato uno shell script che cambia in modo automatico
-l'orientamento dello schermo, del trackpad e del touchscreen, a patto che i	valori TOUCHPAD e TOUCHSCREEN siano soddisfatti
+l'orientamento dello schermo, del trackpad e del touchscreen, a patto che i valori TOUCHPAD e TOUCHSCREEN siano soddisfatti
 correttamente.
 
 Per trovare in modo efficace il nome dei due dispositivi richesti da suddetto script, nello zip verranno acclusi due file ".sh" che estraggono
@@ -51,6 +51,7 @@ il nome dei dispositivi dal database UDEV del vostro sistema GNU/Linux.
  
  
  TL;DR
+ 
  Ecco i vari step per cambiare efficacemente l'orientamento dello schermo e dei dispositivi touch su un sistema GNU/Linux.
  (Le seguenti istruzioni sono applicabili a qualsiasi distribuzione). Per questo HOW TO, i vari passaggi devono essere eseguiti da
  terminale all'interno della cartella scaricata. NON È NECESSARIO L'USO DELL'AMMINISTRATORE, PER EVITARE PROBLEMI, È PREFERIBILE
@@ -99,6 +100,7 @@ Esempio:
 
 Una volta eseguito, lo script cambierà l'orientamento dello schermo e dei dispositivi touch. Gli script usati in
 precedenza possono essere eliminati.
+
 FINE :)
 
 
@@ -107,7 +109,7 @@ Si può creare un alias nel file .bashrc per automatizzare questo processo e non
 
 Per esempio, se si è salvata la cartella "touchdev" in /home/user/Downloads, allora l'alias sarà:
 
-		alias QUELLOCHEVUOI='/home/user/Downloads/touchdev/./rotate-desktop.sh'
+		alias QUELLOCHEVUOI='/home/user/Downloads/touchdev/./rotate-desktop.sh ORIENTAMENTO'
 ---
 
 2^ BONUS TIP=
