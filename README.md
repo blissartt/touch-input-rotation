@@ -3,7 +3,7 @@ A little script library to rotate effectively your screen and touch input device
 --------------------------------------------------------------------------------------------------------------------
 # Cambiare l'orientamento dello schermo su GNU/Linux.
 
-Su GNU/Linux cambiare l'orientamento dello schermo è piuttosto semplice sui maggiori desktop enviroment come GNOME o KDE,
+Su GNU/Linux cambiare l'orientamento dello schermo è piuttosto semplice sui maggiori desktop environment come GNOME o KDE,
 ma non lo è altrettanto su window manager indipendenti(come dwm o i3). Il motivo? Gli strumenti grafici che fanno parte
 dei pacchetti CORE dei suddetti DE(desktop enviroment) in questo caso non sono presenti.
 Si può ricorrere all'utilissimo tool "Arandr", con il quale possiamo modificare questi parametri comodamente con un interfaccia
@@ -17,7 +17,7 @@ trackpad o la funzione touchscreen del nostro dispositivo. Xrandr, in questa cir
 Il problema è che il comando "xrandr" non tiene conto della visuale dell'utente, e dunque cambia l'orinetamento solo dell'input, e non
 "ruota" tutto il trackpad o il touchscreen. Esiste una soluzione. Con il comando "xinput -set-prop " si possono modificare le proprietà
 dei dispositivi di input del nostro sistema, tra i quali c'è una funzione interessante, che si chiama "Coordinate Transformation Matrix".
-Questa ci permette sostanzialemnete di ricalibrare i nostri dispositivi di input senza incappare in ulteriori problemi.
+Questa ci permette sostanzialemente di ricalibrare i nostri dispositivi di input senza incappare in ulteriori problemi.
 
 Per esempio:
 dato che:
