@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Touchpad:"
+
 tmp_dir=$(mktemp -d)
 pushd $tmp_dir > /dev/null
 # Export whole database
