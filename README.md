@@ -108,6 +108,7 @@ among which is an interesting function called "Coordinate Transformation Matrix"
 This essentially allows us to recalibrate our input devices without running into further problems.
 
 For example...
+
 if:
 		
 	TOUCHPAD='DEFAULT'
