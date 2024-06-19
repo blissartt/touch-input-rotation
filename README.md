@@ -94,12 +94,12 @@ precedenza possono essere eliminati.
 
 ## English
 On GNU/Linux, changing screen orientation is rather simple on desktop enviroments such as GNOME or KDE,
-but not so easy on stand-alone window managers (such as dwm or i3). The reason? The graphical tools that allow such rotation in this
-are not present in this case. We can resort to the very useful "Arandr" tool, with which we can modify these parameters with a
+but not so easy on stand-alone window managers (such as dwm or i3). The reason? The graphical tools that allow such rotation
+are not present in this case. We can resort to the "Arandr" tool, which we can use to modify these parameters with a
 graphical interface, using 'in the background' the 'xrandr' tool, which is present in almost all distributions.
 
 However, if we go to change the orientation of our screen via Arandr, on laptops there may be problems with the
-trackpad or the touchscreen function of our device. Xrandr, in this circumstance, will falsely reverse the input, which
+trackpad or the touchscreen function of our device. Xrandr, in this circumstance, will fallaciously reverse the input, which
 can be quite frustrating if we want to use our device in 'tablet' mode.
 
 The problem is that the 'xrandr' utility only rotates the movements of the touchscreen and trackpad on the screen, but not the input itself.
@@ -122,16 +122,16 @@ and
 	xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" 0 -1 1 1 0 0 0 0 1
 
 it's possible to calibrate the touchpad and touchscreen, orienting them to the left. Assuming that the values DEFAULT and DEFAULT-1
-are replaced by the name of the trackpad and touchscreen (found with 'xinput list'). These commands work on all 
+are replaced by the name of the trackpad and touchscreen (these can be found with 'xinput list'). These commands will work on all 
 GNU/Linux systems. Instead of using 'xinput list', we have created two bash scripts that retrieve the names of your
 input devices.
 
 To effectively change these variables, GitHub user 'mildmojo', has created a shell script that automatically changes
 the orientation of the screen, trackpad and touchscreen, provided that the values TOUCHPAD and TOUCHSCREEN are met
-correctly. In order to efficiently find the name of the two devices requested by the above script, two bash scripts are included in the zip that extract
-the name of the devices from the 'udev' database of your GNU/Linux system.
+correctly. In order to efficiently find the name of the two devices requested by the above script, two bash scripts are included in the repo.
+These extract the name of the devices from the 'udev' database of your GNU/Linux system.
 
-Here are the various steps to effectively change the orientation of the screen and touch devices on a GNU/Linux system.
+Here are the various steps to effectively change the orientation of the screen and touch devices.
 The following instructions are applicable to any distribution. TO AVOID PROBLEMS, IT IS PREFERABLE TO RUN THE COMMANDS IN A SHELL
 WITHOUT ROOT PERMISSIONS. The 'git' tool is also required to clone the Github repo.
 
@@ -145,13 +145,11 @@ WITHOUT ROOT PERMISSIONS. The 'git' tool is also required to clone the Github re
 			
 	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
 
-
 -2 Run the two scripts with the following commands and save the result for the next step, remembering which of the two outputs was from the touchpad and
 which was from the touchscreen.
 			
 	./recognize-touchpad.sh
 	./recognize-touchscreen.sh	
-
 
 -3 Open the 'rotate-desktop.sh' script with a text editor and replace the values DEFAULT and DEFAULT-1 in the apostrophes with the output received in the
 previous step, i.e. the name of the devices in question. Afterwards, save the file.
@@ -161,11 +159,9 @@ Example:
 	TOUCHPAD='SynPS/2 Synaptics TouchPad'.
 	TOUCHSCREEN='TPPS/2 IBM TrackPoint'		
 
-
 -4 Make the file executable with the following command:
 
 	chmod a+x rotate-desktop.sh
-
 
 -5 Run the file, specifying the orientation, with this command:
 
@@ -178,7 +174,7 @@ where 'ORIENTATION' must be replaced by one of the following options:
 -inverted
 -normal
 
-Once executed, the script will change the orientation of the screen and touch devices. Previously used scripts can be deleted.
+Once executed, the script will change the orientation of the screen and touch devices. Previously used scripts are no longer needed and they can be deleted.
 
 
 		
