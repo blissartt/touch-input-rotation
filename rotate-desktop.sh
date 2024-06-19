@@ -9,8 +9,10 @@
 # Using transformation matrix bits taken from:
 #   https://wiki.ubuntu.com/X/InputCoordinateTransformation
 #
-
-# Please replace 'DEFAULT' and 'DEFAULT-1' with the name of your touchscreen and touchpad (they can be found using the other sripts).
+#ENGLISH
+# Please replace 'DEFAULT' and 'DEFAULT-1' with the name of your touchscreen and touchpad (they can be found using the other scripts).
+#ITALIAN
+# Rimpiazzare i valori 'DEFAULT' e 'DEFAULT-1' con il nome del vostrp touchscreen e touchpad (essi possono essere trovati utlizzando gli altri due script).
 TOUCHPAD='DEFAULT'
 TOUCHSCREEN='DEFAULT-1'
 
