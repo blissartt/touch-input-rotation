@@ -17,16 +17,16 @@ Questa ci permette sostanzialemnete di ricalibrare i nostri dispositivi di input
 Per esempio:
 dato che:
 		
-<< TOUCHPAD='DEFAULT' >>
-<< TOUCHSCREEN='DEFAULT-1' >>
+	TOUCHPAD='DEFAULT'
+	TOUCHSCREEN='DEFAULT-1'
 
 con i comandi:
 
-<< xinput set-prop "$TOUCHPAD"    "$TRANSFORM" 0 -1 1 1 0 0 0 0 1 >>
+	xinput set-prop "$TOUCHPAD"    "$TRANSFORM" 0 -1 1 1 0 0 0 0 1
 		
-		e
+  e
 		
-<< xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" 0 -1 1 1 0 0 0 0 1 >>
+	xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" 0 -1 1 1 0 0 0 0 1
 		
 si possono calibrare il touchpad e il touchscreen, orientandoli verso sinistra. Assumendo che i valori DEFAULT e DEFAULT-1
 vengano rimpiazzati dal nome del trackpad e del touchscreen (reperibili con 'xinput list'), questi comandi funzionano su tutti i 
@@ -48,20 +48,20 @@ SENZA PERMESSI ROOT. Per clonare la repo Github è inoltre necessario lo strumen
 
 -0 Clonare la repo Github ed entrarvi all'interno:
 
-<< git clone https://github.com/blissartt/touchdev-calibration >>
-<< cd touchdev-calibration >>
+	git clone https://github.com/blissartt/touchdev-calibration
+	cd touchdev-calibration
 
 
 -1 Rendere eseguibili i due script con il seguente comando:
 			
-<< chmod a+x recognize-touchpad.sh recognize-touchscreen.sh >>
+	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
 
 
 -2 Eseguire i due script con i seguenti comandi e salvare il risultato ottenuto per il passaggio successivo, ricordandosi quale dei due output fosse del touchpad e
 quale fosse del touchscreen.
 			
-<< ./recognize-touchpad.sh >>
-<< ./recognize-touchscreen.sh >>		
+	./recognize-touchpad.sh
+	./recognize-touchscreen.sh	
 
 
 -3 Aprire lo script "rotate-desktop.sh" con un text editor e sostituire i valori DEFAULT e DEFAULT-1 negli apostrofi con gli output ricevuti nel
@@ -75,18 +75,18 @@ Esempio:
 
 -4 Rendere eseguibile il file con il seguente comando:
 
-<< chmod a+x rotate-desktop.sh >>
+	chmod a+x rotate-desktop.sh
 
 
 -5 Eseguire il file, specificando l'orientamento, con questo comando:
 
-<< ./rotate-desktop.sh ORIENTAMENTO>>
-		"ORIENTAMENTO" deve essere sostituito da una delle seguenti opzioni:
+	./rotate-desktop.sh ORIENTAMENTO
+dove "ORIENTAMENTO" deve essere sostituito da una delle seguenti opzioni:
 		
-		-left
-		-right
-		-inverted
-		-normal
+-left
+-right
+-inverted
+-normal
 
 Una volta eseguito, lo script cambierà l'orientamento dello schermo e dei dispositivi touch. Gli script usati in
 precedenza possono essere eliminati.
