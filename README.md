@@ -69,8 +69,8 @@ passaggio precedente, cioè il nome dei dispostitivi in questione. Dopodiche, sa
 
 Esempio:
 
-		TOUCHPAD='SynPS/2 Synaptics TouchPad'
-		TOUCHSCREEN='TPPS/2 IBM TrackPoint'		
+	TOUCHPAD='SynPS/2 Synaptics TouchPad'
+	TOUCHSCREEN='TPPS/2 IBM TrackPoint'		
 
 
 -4 Rendere eseguibile il file con il seguente comando:
