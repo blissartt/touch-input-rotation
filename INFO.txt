@@ -7,8 +7,8 @@ Change the orientation of your screen, as well as input devices on GNU/Linux.
 |-----------------------|
 Su GNU/Linux cambiare l'orientamento dello schermo è piuttosto semplice su desktop enviroment come GNOME o KDE,
 ma non lo è altrettanto su window manager indipendenti (come dwm o i3). Il motivo? Gli strumenti grafici che permettono tale rotazione in questo
-caso non sono presenti. Si può ricorrere all'utilissimo tool "Arandr", con il quale possiamo modificare questi parametri con un interfaccia
-grafica, utilizzando "in sottofondo" lo strumento "xrandr", presente in quasi tutte le distribuzioni.
+caso non sono presenti. Si può ricorrere all'utilissimo tool 'Arandr', con il quale possiamo modificare questi parametri con un interfaccia
+grafica, utilizzando "in sottofondo" lo strumento 'xrandr', presente in quasi tutte le distribuzioni.
 
 Andando però a cambiare l'orientamento dello nostro schermo tramite Arandr, sui laptop si possono manifestare problemi con il
 trackpad o la funzione touchscreen del nostro dispositivo. Xrandr, in questa circostanza, ne invertirà in modo fallace l'input, il che
@@ -24,8 +24,8 @@ può rivelarsi piuttosto frustrante se si desidera utlizzare il nostro dispositi
 |SPIEGAZIONE DEL PROBLEMA E RISOLUZIONE                             |
 |-------------------------------------------------------------------|
 Il problema è che l'utility "xrandr" ruota solo i movimenti del touchscreen e del trackpad sullo schermo, ma non l'input in sè.
-Esiste una soluzione. Con il comando "xinput -set-prop " si possono modificare le proprietà dei dispositivi di input del nostro sistema,
-tra le quali c'è una funzione interessante, che si chiama "Coordinate Transformation Matrix".
+Esiste una soluzione. Con il comando 'xinput -set-prop' si possono modificare le proprietà dei dispositivi di input del nostro sistema,
+tra le quali c'è una funzione interessante, che si chiama 'Coordinate Transformation Matrix'.
 Questa ci permette sostanzialemnete di ricalibrare i nostri dispositivi di input senza incappare in ulteriori problemi.
 
 Per esempio:
@@ -54,7 +54,7 @@ dispositvi di input
 
 
 |-----------------------------|
-|"HOW TO" E SCRIPT            |
+|'HOW TO' E SCRIPT            |
 |-----------------------------|
 Per modificare in modo efficace queste variabili, l'utente GitHub 'mildmojo', ha creato uno shell script che cambia in modo automatico
 l'orientamento dello schermo, del trackpad e del touchscreen, a patto che i valori TOUCHPAD e TOUCHSCREEN siano soddisfatti
