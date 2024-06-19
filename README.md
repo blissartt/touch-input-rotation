@@ -1,4 +1,4 @@
-#touchdev-calibration
+# touchdev-calibration
 
 Su GNU/Linux cambiare l'orientamento dello schermo è piuttosto semplice su desktop enviroment come GNOME o KDE,
 ma non lo è altrettanto su window manager indipendenti (come dwm o i3). Il motivo? Gli strumenti grafici che permettono tale rotazione in questo
