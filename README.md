@@ -1,4 +1,4 @@
-# touchdev-calibration
+# touch-input-rotation
 This file describe sthe same process both in English and in Italian.
 
 ## Italian
