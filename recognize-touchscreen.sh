@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Touchscreen:"
+
 tmp_dir=$(mktemp -d)
 pushd $tmp_dir > /dev/null
 # Export whole database
