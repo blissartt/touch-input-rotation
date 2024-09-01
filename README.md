@@ -1,5 +1,5 @@
 # touch-input-rotation
-This file describe sthe same process both in English and in Italian.
+This file describe the same process both in English and in Italian.
 
 ## Italian
 Su GNU/Linux cambiare l'orientamento dello schermo è piuttosto semplice su desktop enviroment come GNOME o KDE,
