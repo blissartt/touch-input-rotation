@@ -52,16 +52,14 @@ SENZA PERMESSI ROOT. Per clonare la repo Github è inoltre necessario lo strumen
 	cd touchdev-calibration
 
 
--1 Rendere eseguibili i due script con il seguente comando:
+-1 Rendere eseguibile lo script per riconoscere i device con il seguente comando:
 			
 	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
 
 
--2 Eseguire i due script con i seguenti comandi e salvare il risultato ottenuto per il passaggio successivo, ricordandosi quale dei due output fosse del touchpad e
-quale fosse del touchscreen.
+-2 Eseguire lo script e salvare il risultato ottenuto per il passaggio successivo:
 			
-	./recognize-touchpad.sh
-	./recognize-touchscreen.sh	
+	./recognize-devices.sh
 
 
 -3 Aprire lo script "rotate-desktop.sh" con un text editor e sostituire i valori DEFAULT e DEFAULT-1 negli apostrofi con gli output ricevuti nel
@@ -142,15 +140,13 @@ WITHOUT ROOT PERMISSIONS. The 'git' tool is also required to clone the Github re
 	cd touchdev-calibration
 
 
--1 Make the two scripts executable with the following command:
+-1 Make tthe script "recognize-devices.sh" executable with the following command:
 			
 	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
 
--2 Run the two scripts with the following commands and save the result for the next step, remembering which of the two outputs was from the touchpad and
-which was from the touchscreen.
+-2 Run the script with the following command and save the result for the next step,
 			
-	./recognize-touchpad.sh
-	./recognize-touchscreen.sh	
+	./recognize-devices.sh
 
 -3 Open the 'rotate-desktop.sh' script with a text editor and replace the values DEFAULT and DEFAULT-1 in the apostrophes with the output received in the
 previous step, i.e. the name of the devices in question. Afterwards, save the file.
