@@ -54,7 +54,7 @@ SENZA PERMESSI ROOT. Per clonare la repo Github è inoltre necessario lo strumen
 
 -1 Rendere eseguibile lo script per riconoscere i device con il seguente comando:
 			
-	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
+	chmod a+x recognize-devices.sh
 
 
 -2 Eseguire lo script e salvare il risultato ottenuto per il passaggio successivo:
@@ -140,11 +140,11 @@ WITHOUT ROOT PERMISSIONS. The 'git' tool is also required to clone the Github re
 	cd touchdev-calibration
 
 
--1 Make tthe script "recognize-devices.sh" executable with the following command:
+-1 Make the script "recognize-devices.sh" executable with the following command:
 			
-	chmod a+x recognize-touchpad.sh recognize-touchscreen.sh
+	chmod a+x recognize-devices.sh
 
--2 Run the script with the following command and save the result for the next step,
+-2 Run the script with the following command and save the result for the next step:
 			
 	./recognize-devices.sh
 
