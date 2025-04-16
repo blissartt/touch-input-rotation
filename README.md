@@ -1,3 +1,7 @@
+# **WARNING**
+## **This repo is archived, this project has moved to Codeberg**
+
+
 # touch-input-rotation
 This file describe the same process both in English and in Italian.
 
